@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+    <form method="POST" action="/create" style="font-family: bebas neue; margin-top: 20%; font-size: 3em; animation: fadeInRight 3s;">
+        {% csrf_token %} {{ form.as_p }}
+        <center><button type="submit" class="btn link2" style="font-family: bungee; margin-top: 1%; font-size: 0.8em; background-color: white;">Shorten URL</button></center>
+    </form>
+</div>
+<style>
+    .link2 {}
+    
+    .link2:hover {
+        background-color: black;
+    }
+    
+    @keyframes fadeInRight {
+        0% {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+</style>
+{% endblock content %}

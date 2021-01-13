@@ -1,0 +1,57 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+
+<div>
+    <center>
+        <h1 style="margin-top: 10%; margin-bottom: -2%; font-size: 2em"><span style="font-family: bungee; font-style: italic; white-space: nowrap">Welcome to </span></h1>
+        <h1 style="margin-bottom: 2%; font-size: 15em; font-family: bebas neue;"><span style="font-family: quicksand">ATOM</span>URL</h1>
+        <a href="/create" class="link1" style="font-family: bungee;  font-size: 3em">Create New URL</a>
+        <img src="{ static 'luke-chesser-eICUFSeirc0-unsplash.jpg' }" alt="">
+    </center>
+</div>
+<style>
+    .link1 {
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 25px;
+        animation: color-change 20s infinite;
+        background-color: black;
+    }
+    
+    .link1:hover {
+        color: red;
+        background-color: rgb(54, 54, 54);
+        text-decoration: none;
+        animation: color-change 1s infinite;
+    }
+    
+    @keyframes color-change {
+        0% {
+            color: rgb(253, 106, 106);
+        }
+        25% {
+            color: rgb(114, 230, 114);
+        }
+        50% {
+            color: rgb(84, 94, 230);
+        }
+        75% {
+            color: rgb(0, 182, 55);
+        }
+        100% {
+            color: rgb(253, 106, 106);
+        }
+    }
+    
+    @keyframes btn-change {
+        0% {
+            background-color: black;
+        }
+        75% {
+            background-color: white;
+        }
+        100% {
+            background-color: black;
+        }
+    }
+</style>
+{% endblock content %}
