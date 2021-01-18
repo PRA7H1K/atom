@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.shortcuts import redirect
+from django.http import HttpResponseRedirect
 from .models import ShortURL
 from .forms import CreateNewShortURL
 from datetime import datetime
@@ -8,7 +10,7 @@ import random, string
 def home(request):
     return render(request, 'home.html')
 
-def redirect(request, url):
+def redirect_old(request, url):
     current_obj = ShortURL.objects.filter(short_url=url)
     if len(current_obj) == 0:
         return render(request, '404.html')
@@ -43,3 +45,7 @@ def registerPage(request):
 
 def loginPage(request):
     return render(request, 'login.html')
+
+def page_redirect(request, url):
+    get_url = ShortURL.objects.filter(short_url=url)
+    return redirect(get_url.first().long_url)

@@ -8,4 +8,4 @@ class ShortURL(models.Model):
     time_date_created = models.DateTimeField()
 
     def __str__(self):
-        return self.original_url
+        return self.long_url
