@@ -1,1 +1,9 @@
 env
+app/settings.py
+app/__init__.py
+app/__pycache__
+urlshort/__pycache__
+urlshort/migrations
+urlshort/static/test.txt
+urlshort/static/admin
+db.sqlite3

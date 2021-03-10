@@ -4,11 +4,11 @@
 
 <head>
     <meta charset="UTF-8 ">
-    <meta name="description" content="TECP URL is a simple, free, and easy to use URL shortener. There's no need for a login or subscription. You can create a shortened url in seconds!">
-    <meta name="author" content="Prathik Pradeep ">
+    <meta name="description" content="AtomURL is a simple, free, and easy to use URL shortener. There's no need for a login or subscription. You can create a shortened url in seconds!">
+    <meta name="author" content="Prathik Pradeep">
     <meta name="keywords" content="Atom, url, url shortener, URL, short, link, link short, link shortener">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
-    <title>TECP - URL</title>
+    <title>AtomURL</title>
 
     <link rel="stylesheet " href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css " integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk " crossorigin="anonymous ">
     <link rel="stylesheet " href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ">
@@ -20,15 +20,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap " rel="stylesheet ">
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap " rel="stylesheet ">
 
-    <link rel="icon" href="{% static 'favicon.png' %}">
+    <link rel="icon" href="https://cdn.exobot.xyz/atom_circle.png">
 
 </head>
 
 <style>
-    #page-container {
-        position: relative;
-        min-height: 100vh;
-    }
     
     #content-wrap {
         padding-bottom: 2.5rem;
@@ -68,26 +64,37 @@
 </style>
 </head>
 
-<body class="background-color" style="overflow-x: hidden">
-    <div id="page-container ">
-        <div id="content-wrap ">
-            <nav class="navbar navbar-dark bg-dark " style="padding-top: 1%; padding-bottom: 1%; padding-left: 2%; padding-right: 2% ">
-                <a class="navbar-brand " href="/ " style="font-size: 140%; font-family: bungee;">The Everyday Coder Project</a>
+<body>
+    <section style="width: 100vw; height: 100vh; overflow-x: hidden; background-image: url('https://cdn.exobot.xyz/gradient.jpg'); background-repeat: no-repeat; background-attachment: scroll; background-size: 100% 100%;">
+            <nav class="navbar navbar-dark bg-dark" style="padding-top: 1%; padding-bottom: 1%; padding-left: 2%; padding-right: 2%; border-radius: 1em; margin-left: 2%; margin-right: 2%; margin-top: 0.5%;">
+                <a class="navbar-brand " href="/ " style="font-size: 200%; font-family: quicksand;">A T O M</a>
                 <span style="color: white ">
                     <!-- <div style="font-family: quicksand ">created by</div>
                     <div style="font-family: bungee; ">PRATHIK PRADEEP</div> -->
                     <a href="/create "><button type="button " class="btn btn-outline-light " style="font-family: bungee; ">Create New URL</button></a> 
                 </span>
             </nav>
-
+            {% block home %} {% endblock home %}
             {% block content %} {% endblock content %}
+    </section>
+
+    <section style="width: 100vw; height: 125vh; background-color: rgb(216, 199, 255); border-top: 5px solid goldenrod;">
+
+        <center><h1 style="font-size: 700%; font-family: quicksand; margin-top: 2%;">One Link For Everything</h1></center>
+        <center><h1 style="font-family: quicksand;">You can post your AtomURL anywhere to share with your audience.</h1></center>
+        <img src="https://cdn.exobot.xyz/person.png" style="float: right; margin-right: 20%; margin-top: 1%;">
+        <img src="https://cdn.exobot.xyz/icons.png" style="float: left; margin-left: 9%;">
+    </section>
+
+    <section style="border-top: 5px solid goldenrod;">
+        <div style="background-color: #292b2c; width: 100vw;">
+            <h1 style="font-family: quicksand; color: rgb(216, 199, 255); text-align: center; padding-top: 1%;">Create a New Short URL Today!</h1>
+            <center><a href="/create "><button type="button " class="btn btn-outline-light" style="font-family: bungee; margin-top: 0.5%;">Create New URL</button></a></center>
+            <div style="width: 100%; text-align: center; padding-top: 2%; padding-bottom: 1%; font-family: 'Quicksand', sans-serif; color: gray ">
+                Copyright &copy; 2021 AtomURL. All Rights Reserved
+            </div>
         </div>
-        <footer id="footer">
-            <center>
-                <h6>The Everyday Project Foundation &copy; 2021.</h4>
-            </center>
-        </footer>
-    </div>
+    </section>
 
 
     <!-- Bootstrap -->
