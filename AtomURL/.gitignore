@@ -7,3 +7,4 @@ urlshort/migrations
 urlshort/static/test.txt
 urlshort/static/admin
 db.sqlite3
+.vscode
